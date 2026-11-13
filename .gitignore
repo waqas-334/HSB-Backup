@@ -1,0 +1,6 @@
+sync-report.json
+__pycache__/
+*.pyc
+.pytest_cache/
+lists/.tmp-*
+.DS_Store

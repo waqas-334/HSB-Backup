@@ -1,0 +1,108 @@
+name: Sync filter lists
+
+on:
+  schedule:
+    - cron: "23 3 * * *"   # daily, 03:23 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: filter-list-sync
+  cancel-in-progress: false
+
+env:
+  ISSUE_LABEL: mirror-sync
+  # Optional repo variables (Settings → Secrets and variables → Actions → Variables):
+  #   ALERT_ASSIGNEES  comma-separated GitHub logins to assign the alert issue to
+  #   ALERT_MENTION    text prepended to alert bodies, e.g. "@CoinCircle/android"
+  ALERT_ASSIGNEES: ${{ vars.ALERT_ASSIGNEES }}
+  ALERT_MENTION: ${{ vars.ALERT_MENTION }}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Sync lists
+        id: sync
+        run: |
+          set +e
+          python scripts/sync.py
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+
+      # Commit only when a list's content changed. manifest.json timestamps change on
+      # every run, so a manifest-only diff is not worth a commit.
+      - name: Commit changed lists
+        run: |
+          if [ -z "$(git status --porcelain -- lists/)" ]; then
+            echo "No list content changed; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- lists/ manifest.json
+          jq -r '.commit_message' sync-report.json > "$RUNNER_TEMP/commit-msg.txt"
+          git commit -F "$RUNNER_TEMP/commit-msg.txt"
+          git pull --rebase
+          git push
+
+      - name: Open, update or close the alert issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh label create "$ISSUE_LABEL" --color D93F0B \
+            --description "Automated filter-list sync alerts" --force >/dev/null
+
+          existing=$(gh issue list --label "$ISSUE_LABEL" --state open --limit 1 \
+            --json number --jq '.[0].number // empty')
+          if [ ! -f sync-report.json ]; then
+            # Tests failed or sync.py crashed before writing its report.
+            echo '{"needs_alert":true,"failed":[{"name":"(workflow)","reason":"tests failed or sync.py crashed; no report produced"}],"rejected":[],"stale":[],"summary_md":""}' > sync-report.json
+          fi
+          needs_alert=$(jq -r '.needs_alert' sync-report.json)
+
+          if [ "$needs_alert" = "true" ]; then
+            {
+              [ -n "$ALERT_MENTION" ] && printf '%s\n\n' "$ALERT_MENTION"
+              echo "Filter-list sync needs attention ([run]($RUN_URL))."
+              echo
+              jq -r '(.failed + .rejected)[] | "- **\(.name)**: \(.reason)"' sync-report.json
+              jq -r '.stale[] | "- **\(.name)**: stale, last changed \(.last_changed_at)"' sync-report.json
+              echo
+              jq -r '.summary_md' sync-report.json
+              echo
+              echo "The last good copy of each affected list is kept in \`lists/\`."
+            } > "$RUNNER_TEMP/body.md"
+
+            if [ -n "$existing" ]; then
+              gh issue comment "$existing" --body-file "$RUNNER_TEMP/body.md"
+            else
+              args=()
+              [ -n "$ALERT_ASSIGNEES" ] && args+=(--assignee "$ALERT_ASSIGNEES")
+              gh issue create --title "Filter-list sync problem" --label "$ISSUE_LABEL" \
+                --body-file "$RUNNER_TEMP/body.md" "${args[@]}"
+            fi
+          elif [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "Recovered: all lists synced successfully ([run]($RUN_URL))."
+            gh issue close "$existing"
+          fi
+
+      - name: Fail the job if any list failed or was rejected
+        if: always() && steps.sync.outputs.exit_code != '0'
+        run: |
+          echo "::error::One or more lists failed to fetch or were rejected. See the job summary."
+          exit 1

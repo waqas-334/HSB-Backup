@@ -1,0 +1,111 @@
+{
+  "defaults": {
+    "max_drop_pct": 30,
+    "stale_after_days": 14,
+    "min_parse_ratio": 0.9,
+    "drop_check_min_previous": 200
+  },
+  "sources": [
+    {
+      "name": "malwareAddRisk.txt",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Risk/hosts",
+      "feature": "MALWARE_BLOCKING",
+      "format": "hosts",
+      "min_entries": 1000,
+      "stale_after_days": null,
+      "note": "FadeMind add.Risk; upstream unchanged since 2022 - staleness check disabled"
+    },
+    {
+      "name": "scamKadHosts.txt",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/KADhosts/hosts",
+      "feature": "SCAM_AND_FRAUD_BLOCKING",
+      "format": "hosts",
+      "min_entries": 22000
+    },
+    {
+      "name": "scamAddSpam.txt",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Spam/hosts",
+      "feature": "SCAM_AND_FRAUD_BLOCKING",
+      "format": "hosts",
+      "min_entries": 20,
+      "stale_after_days": null,
+      "note": "FadeMind add.Spam; upstream unchanged since 2021 - staleness check disabled"
+    },
+    {
+      "name": "scamFakeNews.txt",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-only/hosts",
+      "feature": "SCAM_AND_FRAUD_BLOCKING",
+      "format": "hosts",
+      "min_entries": 1000
+    },
+    {
+      "name": "adsAdaway.txt",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/adaway.org/hosts",
+      "feature": "ADS_AND_TRACKERS_BLOCKING",
+      "format": "hosts",
+      "min_entries": 3600,
+      "stale_after_days": null,
+      "note": "StevenBlack has paused updates of this source - staleness check disabled"
+    },
+    {
+      "name": "adsYoyo.txt",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/yoyo.org/hosts",
+      "feature": "ADS_AND_TRACKERS_BLOCKING",
+      "format": "hosts",
+      "min_entries": 1700,
+      "stale_after_days": null,
+      "note": "StevenBlack has paused updates of this source - staleness check disabled"
+    },
+    {
+      "name": "adsTrackers.txt",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.2o7Net/hosts",
+      "feature": "ADS_AND_TRACKERS_BLOCKING",
+      "format": "hosts",
+      "min_entries": 1000,
+      "stale_after_days": null,
+      "note": "FadeMind add.2o7Net; upstream unchanged since 2023 - staleness check disabled"
+    },
+    {
+      "name": "socialOnly.txt",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/social-only/hosts",
+      "feature": "SOCIAL_MEDIA_BLOCKING",
+      "format": "hosts",
+      "min_entries": 1900
+    },
+    {
+      "name": "gamblingOnly.txt",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling-only/hosts",
+      "feature": "GAMBLING_BLOCKING",
+      "format": "hosts",
+      "min_entries": 3300
+    },
+    {
+      "name": "pornOnly.txt",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn-only/hosts",
+      "feature": "ADULT_OR_PORN_BLOCKING",
+      "format": "hosts",
+      "min_entries": 38400
+    },
+    {
+      "name": "dNSTakeoversList.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt",
+      "feature": "DNS_TAKEOVERS_BLOCKING",
+      "format": "adblock",
+      "min_entries": 700
+    },
+    {
+      "name": "piracyList.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/anti.piracy.txt",
+      "feature": "PIRACY_BLOCKING",
+      "format": "adblock",
+      "min_entries": 30700
+    },
+    {
+      "name": "iPProxiesList.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/doh-vpn-proxy-bypass.txt",
+      "feature": "IP_PROXIES_BLOCKING",
+      "format": "adblock",
+      "min_entries": 8200
+    }
+  ]
+}
