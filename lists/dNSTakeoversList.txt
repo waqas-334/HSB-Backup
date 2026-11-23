@@ -6,10 +6,10 @@
 ! Issues: https://github.com/hagezi/dns-blocklists/issues
 ! Disclaimer: https://github.com/hagezi/dns-blocklists/blob/main/README.md#disclaimer
 ! Expires: 8 hours
-! Last modified: 22 Nov 2026 09:06 UTC
-! Version: 2026.1122.0906.35
+! Last modified: 23 Nov 2026 08:50 UTC
+! Version: 2026.1123.0850.26
 ! Syntax: AdBlock
-! Number of entries: 1517
+! Number of entries: 1496
 !
 ||dyn.addr.tools^
 ||changeip.co.uk^
@@ -27,10 +27,8 @@
 ||dynamicdns.org.uk^
 ||limit.org.uk^
 ||h4g3z1-dyndns.web.app^
-||dyndns.za.org^
 ||0000000000000000000000.com^
 ||001www.com^
-||0rg.us^
 ||0x.no^
 ||100mountain.com^
 ||10dv.com^
@@ -109,7 +107,6 @@
 ||atholdinginc.com^
 ||atlantatruckdrivingschool.us^
 ||auraria.org^
-||australia.ai^
 ||authorizeddns.net^
 ||authorizeddns.org^
 ||autoipset.com^
@@ -179,7 +176,6 @@
 ||changeip.biz^
 ||changeip.co^
 ||changeip.com^
-||changeip.me^
 ||changeip.name^
 ||changeip.net^
 ||changeip.org^
@@ -216,7 +212,6 @@
 ||cloudxns.net^
 ||cmirg.com^
 ||cnstefancelmare.ro^
-||coalnet.ru^
 ||codns.com^
 ||colegiotorrevilano.es^
 ||collegefan.org^
@@ -283,7 +278,6 @@
 ||dhs.org^
 ||digikabel.hu^
 ||digitalgroupe.com^
-||dip.jp^
 ||diskstation.eu^
 ||diskstation.org^
 ||ditchyourip.com^
@@ -367,7 +361,6 @@
 ||duia.ro^
 ||duia.us^
 ||duiadns.net^
-||dumb1.com^
 ||dvr-ddns.com^
 ||dvrcam.info^
 ||dvrdns.org^
@@ -460,7 +453,6 @@
 ||eating-organic.net^
 ||eatuo.com^
 ||echoparklake.com^
-||edns.biz^
 ||effers.com^
 ||eiresol.com^
 ||elchemi.com^
@@ -612,7 +604,6 @@
 ||game-host.org^
 ||game-server.cc^
 ||garmanage.com^
-||garypatel.com^
 ||gastright.com^
 ||geekgalaxy.com^
 ||geobattery.com^
@@ -752,7 +743,6 @@
 ||ipnodns.ru^
 ||ipq.co^
 ||iprowave.com^
-||ipupdater.com^
 ||ipv64.de^
 ||ipv64.net^
 ||is-a-anarchist.com^
@@ -1093,12 +1083,10 @@
 ||now-dns.net^
 ||now-dns.org^
 ||nowddns.com^
-||ns01.biz^
 ||ns01.info^
 ||ns01.us^
 ||ns02.biz^
 ||ns02.info^
-||ns02.us^
 ||ns1.name^
 ||ns2.name^
 ||ns3.name^
@@ -1162,7 +1150,6 @@
 ||port25.biz^
 ||portfwd.com^
 ||portmap.host^
-||portrelay.com^
 ||possessed.us^
 ||prettyweak.com^
 ||priamaakcia.sk^
@@ -1212,7 +1199,6 @@
 ||root64.de^
 ||roth.ca^
 ||route64.de^
-||routemehome.com^
 ||roxa.org^
 ||rpz.su^
 ||rr.nu^
@@ -1284,7 +1270,6 @@
 ||sexxxy.biz^
 ||shacknet.biz^
 ||shacknet.us^
-||shadir.com^
 ||sharkltd.com^
 ||sheatfish.org^
 ||sheepindonesia.org^
@@ -1361,7 +1346,6 @@
 ||synology-diskstation.de^
 ||synology-ds.de^
 ||synoserver.com^
-||syntereo.com^
 ||sysadminetworks.com^
 ||system-ns.com^
 ||systes.net^
@@ -1396,14 +1380,12 @@
 ||tobuy.us^
 ||toh.info^
 ||topdns.com^
-||topsddns.net^
 ||toshibanetcam.com^
 ||toythieves.com^
 ||tpddns.cn^
 ||traeumtgerade.de^
 ||trailsendlodge.org^
 ||trickip.net^
-||trickip.org^
 ||trieditmyself.com^
 ||tru.io^
 ||truthvid.com^
@@ -1463,7 +1445,6 @@
 ||wakingmoon.com^
 ||wan64.de^
 ||wanip.ch^
-||warp9computers.com^
 ||webhop.biz^
 ||webhop.info^
 ||webhop.me^
@@ -1492,7 +1473,6 @@
 ||writesthisblog.com^
 ||www1.biz^
 ||wwwhost.biz^
-||wwwhost.us^
 ||x24hr.com^
 ||x443.pw^
 ||xddns.de^
@@ -1500,7 +1480,6 @@
 ||xpresit.net^
 ||xxuz.com^
 ||xxxxx.tw^
-||xxxy.biz^
 ||xxxy.info^
 ||yao.cl^
 ||ydns.eu^
