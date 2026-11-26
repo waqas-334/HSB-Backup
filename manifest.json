@@ -5,7 +5,7 @@
       "entry_count": 7325,
       "etag": "\"5d1a7b3cce1edd7d61a089c70cec1778e3738be882b046e299594769d89b65d1\"",
       "last_changed_at": "2026-11-16T11:47:27Z",
-      "last_checked_at": "2026-11-25T13:13:38Z",
+      "last_checked_at": "2026-11-26T12:54:21Z",
       "last_status": "unchanged",
       "sha256": "6a5014de43a796b72fe3ed190b45fb4754a808361c5e59212a40f47d9ff1b86f",
       "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/adaway.org/hosts"
@@ -15,7 +15,7 @@
       "entry_count": 2030,
       "etag": "\"575bb1e8c00d226a7816257464e1c0801c7608c77378b7491e0d6a7a1819e4d1\"",
       "last_changed_at": "2026-11-13T00:58:13Z",
-      "last_checked_at": "2026-11-25T13:13:38Z",
+      "last_checked_at": "2026-11-26T12:54:21Z",
       "last_status": "unchanged",
       "sha256": "e683123f72130881d146f3407308aecc7181e7d3ee11623d58e6da49c1949ead",
       "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.2o7Net/hosts"
@@ -25,19 +25,19 @@
       "entry_count": 3563,
       "etag": "\"9654693567e6098253efb20e1b6a13c66b56b531074a933cf04ac81a37c1b205\"",
       "last_changed_at": "2026-11-16T11:47:27Z",
-      "last_checked_at": "2026-11-25T13:13:38Z",
+      "last_checked_at": "2026-11-26T12:54:21Z",
       "last_status": "unchanged",
       "sha256": "b3e7e62bca2058d8c6c20a41473f02cb5d76f5bc8854a04189071a042d42e56d",
       "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/yoyo.org/hosts"
     },
     "dNSTakeoversList.txt": {
-      "bytes": 24257,
-      "entry_count": 1496,
-      "etag": "\"ec2bff5e6574f7eda1d08bb9c5468c7429010babd622400a81e93be2893183b1\"",
-      "last_changed_at": "2026-11-25T13:13:38Z",
-      "last_checked_at": "2026-11-25T13:13:38Z",
+      "bytes": 30819,
+      "entry_count": 1940,
+      "etag": "\"a39b66364476cb0b6c1a1dfbb22aff597af85a07d1d6d8388a2f5c30d589791b\"",
+      "last_changed_at": "2026-11-26T12:54:21Z",
+      "last_checked_at": "2026-11-26T12:54:21Z",
       "last_status": "updated",
-      "sha256": "62bdb0e88fae53c46834850cb81f39955b7d47cc9e527f767ec41f305e298e3b",
+      "sha256": "4e91896c6a792dd72ec2444d1813edc3d4fb71a2306ae6e2a511f830f417dd14",
       "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt"
     },
     "gamblingOnly.txt": {
@@ -45,19 +45,19 @@
       "entry_count": 6744,
       "etag": "\"5c53b38baa009847ddfe22e9cf924f7db4f2a051c5c0038ee91fc36971a71a64\"",
       "last_changed_at": "2026-11-24T13:59:15Z",
-      "last_checked_at": "2026-11-25T13:13:38Z",
+      "last_checked_at": "2026-11-26T12:54:21Z",
       "last_status": "unchanged",
       "sha256": "71313fdcf66dd7a4b289607c7945d90a0029292cfae540bd36721322edfe9bdd",
       "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling-only/hosts"
     },
     "iPProxiesList.txt": {
-      "bytes": 343879,
-      "entry_count": 16518,
-      "etag": "\"c21608b789149e631dfa2785e2c003f3269f4f59f73b4584144473049a872f5c\"",
-      "last_changed_at": "2026-11-25T13:13:38Z",
-      "last_checked_at": "2026-11-25T13:13:38Z",
+      "bytes": 343649,
+      "entry_count": 16504,
+      "etag": "\"25a59855d9907ba3de6f2c5a894b222e7ceb7a71fb35f5bb1b36879c6db40eed\"",
+      "last_changed_at": "2026-11-26T12:54:21Z",
+      "last_checked_at": "2026-11-26T12:54:21Z",
       "last_status": "updated",
-      "sha256": "3e9a93f1a116499864add392b9f37d77dd7149e058ac9daeb734666b651f6bfa",
+      "sha256": "4d52d9935ba2d770048438737b7ccc3dd672bca6a8b8a49f6d053e50473d7791",
       "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/doh-vpn-proxy-bypass.txt"
     },
     "malwareAddRisk.txt": {
@@ -65,19 +65,19 @@
       "entry_count": 2189,
       "etag": "\"017265ef539060dcda414ab905a416f60d8cba8189498b37a08329120a84a1a3\"",
       "last_changed_at": "2026-11-13T00:58:13Z",
-      "last_checked_at": "2026-11-25T13:13:38Z",
+      "last_checked_at": "2026-11-26T12:54:21Z",
       "last_status": "unchanged",
       "sha256": "baedee79b7a3b9e1825080f4daf42a7d9dc37eda03a4381b332b7ef807129b0e",
       "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Risk/hosts"
     },
     "piracyList.txt": {
-      "bytes": 1464018,
-      "entry_count": 63829,
-      "etag": "\"3528847a67894906c677458936fc86e2096f2cba5ebd509c3e9e8a23772c468a\"",
-      "last_changed_at": "2026-11-25T13:13:38Z",
-      "last_checked_at": "2026-11-25T13:13:38Z",
+      "bytes": 1473150,
+      "entry_count": 64214,
+      "etag": "\"7d9cd329b799d2d4b617258320cdb3fc9fdf92ac2273b44a36fb94a328966153\"",
+      "last_changed_at": "2026-11-26T12:54:21Z",
+      "last_checked_at": "2026-11-26T12:54:21Z",
       "last_status": "updated",
-      "sha256": "12a4024c7c5f0eaba42962b3eaf43195c416bbc5043acd05b48551c0b4b39f47",
+      "sha256": "2cf90e08291347afae53217278ed7c8b1a96f60510f961ab5f03ea23493330a5",
       "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/anti.piracy.txt"
     },
     "pornOnly.txt": {
@@ -85,7 +85,7 @@
       "entry_count": 76811,
       "etag": "\"7976af8d48efe8cd6aea28e6351b7fd6c348cd9fef4bba73eb92ffaa6cc163ae\"",
       "last_changed_at": "2026-11-24T13:59:15Z",
-      "last_checked_at": "2026-11-25T13:13:38Z",
+      "last_checked_at": "2026-11-26T12:54:21Z",
       "last_status": "unchanged",
       "sha256": "40314a1d536c8728cf7d3cb3db665e19e4574a83d669db875cb04087b41836fe",
       "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn-only/hosts"
@@ -95,7 +95,7 @@
       "entry_count": 57,
       "etag": "\"0c4642d693ab1369c13f886c7c6f085383968423fd94f01c95e1d7bf413e5bb6\"",
       "last_changed_at": "2026-11-13T00:58:13Z",
-      "last_checked_at": "2026-11-25T13:13:38Z",
+      "last_checked_at": "2026-11-26T12:54:21Z",
       "last_status": "unchanged",
       "sha256": "5e925892954443b0b0dcbfc26926d2f48e86034935887aad75a9aaaa0a8eeccc",
       "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Spam/hosts"
@@ -105,7 +105,7 @@
       "entry_count": 2187,
       "etag": "\"4f427d6f0472533e699999ac3973d07747fb5f1fa916ef549aac2bc4fb6d8d94\"",
       "last_changed_at": "2026-11-24T13:59:15Z",
-      "last_checked_at": "2026-11-25T13:13:38Z",
+      "last_checked_at": "2026-11-26T12:54:21Z",
       "last_status": "unchanged",
       "sha256": "352328791c5acd270eaefafd19435dc8564482813bdbd9bfbdf23adb59977aa4",
       "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-only/hosts"
@@ -115,7 +115,7 @@
       "entry_count": 50462,
       "etag": "\"96ae3e274390815911bb0a88c7e97df43335a1a0abcc7452679745e098e1d7b9\"",
       "last_changed_at": "2026-11-24T13:59:15Z",
-      "last_checked_at": "2026-11-25T13:13:38Z",
+      "last_checked_at": "2026-11-26T12:54:21Z",
       "last_status": "unchanged",
       "sha256": "652d535fbd91011db4b2afa4c27efd1cfb170308f71878b21583e9167c48fa19",
       "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/KADhosts/hosts"
@@ -125,7 +125,7 @@
       "entry_count": 3808,
       "etag": "\"bd12f31b3cf836713cdf738f8994423476531cc6b1d59db42d5b8dd159a427d3\"",
       "last_changed_at": "2026-11-24T13:59:15Z",
-      "last_checked_at": "2026-11-25T13:13:38Z",
+      "last_checked_at": "2026-11-26T12:54:21Z",
       "last_status": "unchanged",
       "sha256": "75cc5bfe93284bfc2bbb35873af77bfa72db7bab0d3a1395a1cdece60222a372",
       "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/social-only/hosts"
